@@ -10,7 +10,7 @@ const ARScene = () => {
       */}
       <a-scene 
         embedded 
-        arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+        arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
         renderer="logarithmicDepthBuffer: true; antialias: true; alpha: true;"
         vr-mode-ui="enabled: false"
       >
@@ -50,7 +50,7 @@ const ARScene = () => {
         textAlign: 'center',
         zIndex: 1000
       }}>
-        <h2 style={{ margin: '0 0 10px 0', fontSize: '1.2rem', fontWeight: '600' }}>Marker-Based AR</h2>
+        <h2 style={{ margin: '0 0 10px 0', fontSize: '1.2rem', fontWeight: '600' }}>Duy Lee</h2>
         <p style={{ margin: 0, fontSize: '0.9rem', opacity: 0.9 }}>Point your camera at a Hero marker to see the 3D object.</p>
         <a 
           href="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" 
