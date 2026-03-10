@@ -5,10 +5,13 @@ import './App.css';
 function App() {
   const [startAR, setStartAR] = useState(false);
 
+  if (startAR) {
+    return <ARScene />;
+  }
+
   return (
     <div className="app-container">
-      {!startAR ? (
-        <div className="landing-page">
+      <div className="landing-page">
           <div className="glass-card">
             <h1>Web AR Experience</h1>
             <p>Built with React & AR.js</p>
@@ -33,10 +36,7 @@ function App() {
             <div className="shape shape-3"></div>
           </div>
         </div>
-      ) : (
-        <ARScene />
-      )}
-    </div>
+      </div>
   );
 }
 

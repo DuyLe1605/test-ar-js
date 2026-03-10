@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #0f172a;
+  background-color: transparent !important;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,6 +19,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background-color: transparent !important;
 }
 
 /* Fix A-Frame canvas styling */
