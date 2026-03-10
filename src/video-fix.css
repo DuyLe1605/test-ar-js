@@ -1,0 +1,27 @@
+/* Xóa bỏ khoảng trắng thừa của body */
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Ép thẻ video do AR.js sinh ra phải lấp đầy màn hình và không bị lệch margin */
+video {
+  width: 100vw !important;
+  height: 100vh !important;
+  top: 0 !important;
+  left: 0 !important;
+  margin: 0 !important;
+  object-fit: cover !important; /* Giúp video không bị méo tỉ lệ */
+  position: absolute !important;
+  z-index: -2; /* Đẩy video xuống dưới cùng */
+}
+
+/* Đảm bảo canvas chứa vật thể 3D (a-scene) đồng bộ với video */
+canvas.a-canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+  top: 0 !important;
+  left: 0 !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+}

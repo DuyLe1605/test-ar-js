@@ -64,7 +64,7 @@ const ARScene = () => {
         textAlign: 'center',
         zIndex: 1000
       }}>
-        <h2 style={{ margin: '0 0 10px 0', fontSize: '1.2rem', fontWeight: '600' }}>Duy Lee</h2>
+        <h2 style={{ margin: '0 0 10px 0', fontSize: '1.2rem', fontWeight: '600' }}>Duy Lee FIX AD</h2>
         <p style={{ margin: 0, fontSize: '0.9rem', opacity: 0.9 }}>Point your camera at a Hero marker to see the 3D object.</p>
         <a 
           href="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" 
