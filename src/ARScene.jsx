@@ -1,4 +1,5 @@
 import React from 'react';
+import './video-fix.css';
 
 const ARScene = () => {
   return (
@@ -9,8 +10,8 @@ const ARScene = () => {
       */}
       <a-scene 
         embedded 
-        arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
-        renderer="logarithmicDepthBuffer: true;"
+        arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+        renderer="logarithmicDepthBuffer: true; antialias: true; alpha: true;"
         vr-mode-ui="enabled: false"
       >
         {/* We use the default hiro marker */}
