@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './video-fix.css';
 
 const ARScene = () => {
+  useEffect(() => {
+    const handleCameraInit = () => {
+      console.log('Camera initialized');
+      setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+      }, 1000); // Wait 1 second before dispatching resize
+    };
+
+    window.addEventListener('camera-init', handleCameraInit);
+    return () => {
+      window.removeEventListener('camera-init', handleCameraInit);
+    };
+  }, []);
+
   return (
     <div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
       {/* 
@@ -10,7 +24,7 @@ const ARScene = () => {
       */}
       <a-scene 
         embedded 
-        arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
+        arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
         renderer="logarithmicDepthBuffer: true; antialias: true; alpha: true;"
         vr-mode-ui="enabled: false"
       >
